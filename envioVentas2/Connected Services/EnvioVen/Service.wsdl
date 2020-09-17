@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost/Service.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost/Service.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/FR.Core.EDM.DTO" />
+      <xsd:import schemaLocation="http://localhost/Service.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost/Service.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/FR.Core.EDM" />
+      <xsd:import schemaLocation="http://localhost/Service.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService_InsertarTipoCambio_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertarTipoCambio" />
+  </wsdl:message>
+  <wsdl:message name="IService_InsertarTipoCambio_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertarTipoCambioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_InsertarTipoCambio_TipoCambioFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/FR.Core.EDM.DTO" name="detail" element="q1:TipoCambio" />
+  </wsdl:message>
+  <wsdl:message name="IService_SyncVentas_InputMessage">
+    <wsdl:part name="parameters" element="tns:SyncVentas" />
+  </wsdl:message>
+  <wsdl:message name="IService_SyncVentas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SyncVentasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_SyncRetiros_InputMessage">
+    <wsdl:part name="parameters" element="tns:SyncRetiros" />
+  </wsdl:message>
+  <wsdl:message name="IService_SyncRetiros_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SyncRetirosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_RegisterSustanciasActivas_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterSustanciasActivas" />
+  </wsdl:message>
+  <wsdl:message name="IService_RegisterSustanciasActivas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterSustanciasActivasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_RegisterProductos_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterProductos" />
+  </wsdl:message>
+  <wsdl:message name="IService_RegisterProductos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterProductosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_RegisterProductos_ProductosFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/FR.Core.EDM.DTO" name="detail" element="q2:Productos" />
+  </wsdl:message>
+  <wsdl:message name="IService_RegisterCategorias_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterCategorias" />
+  </wsdl:message>
+  <wsdl:message name="IService_RegisterCategorias_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterCategoriasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_RegisterCategorias_CategoriasFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/FR.Core.EDM.DTO" name="detail" element="q3:Categorias" />
+  </wsdl:message>
+  <wsdl:message name="IService_RegisterTipoClientes_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterTipoClientes" />
+  </wsdl:message>
+  <wsdl:message name="IService_RegisterTipoClientes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterTipoClientesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_RegisterConceptosCancelacion_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterConceptosCancelacion" />
+  </wsdl:message>
+  <wsdl:message name="IService_RegisterConceptosCancelacion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterConceptosCancelacionResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService">
+    <wsdl:operation name="InsertarTipoCambio">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/InsertarTipoCambio" message="tns:IService_InsertarTipoCambio_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/InsertarTipoCambioResponse" message="tns:IService_InsertarTipoCambio_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService/InsertarTipoCambioTipoCambioFault" name="TipoCambioFault" message="tns:IService_InsertarTipoCambio_TipoCambioFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SyncVentas">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/SyncVentas" message="tns:IService_SyncVentas_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/SyncVentasResponse" message="tns:IService_SyncVentas_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SyncRetiros">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/SyncRetiros" message="tns:IService_SyncRetiros_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/SyncRetirosResponse" message="tns:IService_SyncRetiros_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RegisterSustanciasActivas">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/RegisterSustanciasActivas" message="tns:IService_RegisterSustanciasActivas_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/RegisterSustanciasActivasResponse" message="tns:IService_RegisterSustanciasActivas_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RegisterProductos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/RegisterProductos" message="tns:IService_RegisterProductos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/RegisterProductosResponse" message="tns:IService_RegisterProductos_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService/RegisterProductosProductosFault" name="ProductosFault" message="tns:IService_RegisterProductos_ProductosFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RegisterCategorias">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/RegisterCategorias" message="tns:IService_RegisterCategorias_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/RegisterCategoriasResponse" message="tns:IService_RegisterCategorias_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService/RegisterCategoriasCategoriasFault" name="CategoriasFault" message="tns:IService_RegisterCategorias_CategoriasFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RegisterTipoClientes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/RegisterTipoClientes" message="tns:IService_RegisterTipoClientes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/RegisterTipoClientesResponse" message="tns:IService_RegisterTipoClientes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RegisterConceptosCancelacion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/RegisterConceptosCancelacion" message="tns:IService_RegisterConceptosCancelacion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/RegisterConceptosCancelacionResponse" message="tns:IService_RegisterConceptosCancelacion_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IService" type="tns:IService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="InsertarTipoCambio">
+      <soap:operation soapAction="http://tempuri.org/IService/InsertarTipoCambio" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="TipoCambioFault">
+        <soap:fault use="literal" name="TipoCambioFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SyncVentas">
+      <soap:operation soapAction="http://tempuri.org/IService/SyncVentas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SyncRetiros">
+      <soap:operation soapAction="http://tempuri.org/IService/SyncRetiros" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegisterSustanciasActivas">
+      <soap:operation soapAction="http://tempuri.org/IService/RegisterSustanciasActivas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegisterProductos">
+      <soap:operation soapAction="http://tempuri.org/IService/RegisterProductos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ProductosFault">
+        <soap:fault use="literal" name="ProductosFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RegisterCategorias">
+      <soap:operation soapAction="http://tempuri.org/IService/RegisterCategorias" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CategoriasFault">
+        <soap:fault use="literal" name="CategoriasFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RegisterTipoClientes">
+      <soap:operation soapAction="http://tempuri.org/IService/RegisterTipoClientes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegisterConceptosCancelacion">
+      <soap:operation soapAction="http://tempuri.org/IService/RegisterConceptosCancelacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service">
+    <wsdl:port name="BasicHttpBinding_IService" binding="tns:BasicHttpBinding_IService">
+      <soap:address location="http://localhost/Service.svc/soapService" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

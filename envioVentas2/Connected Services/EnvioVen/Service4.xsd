@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/FR.Core.EDM.DTO" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/FR.Core.EDM.DTO" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="TipoCambio">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="cve_tipo_cambio" type="xs:short" />
+      <xs:element minOccurs="0" name="fecha_alta" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fecha_final" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fecha_inicio" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fecha_modificacion" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="tipo_cambio" type="xs:decimal" />
+      <xs:element minOccurs="0" name="usuario" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TipoCambio" nillable="true" type="tns:TipoCambio" />
+  <xs:complexType name="Productos">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DescripcionCortaComercial" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DescripcionLargaComercial" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GrupoMarca" type="xs:int" />
+      <xs:element minOccurs="0" name="NombreComercial" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PalabrasClaveComercial" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="aplica_cdso" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="aplica_laboratorio" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cantidad_medida1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cantidad_medida2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="categoria" type="xs:int" />
+      <xs:element minOccurs="0" name="clasificacion_abc_ldm" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="codigo" type="xs:int" />
+      <xs:element minOccurs="0" name="codigo_barra" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="codigo_produccion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="compra_venta" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cuadro_inmedica" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cve_producto_sat" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cve_unidad_sat" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="descripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="fecha_alta" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="genero" type="xs:int" />
+      <xs:element minOccurs="0" name="marca" type="xs:int" />
+      <xs:element minOccurs="0" name="mercancia_consigna" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="otorga_descuento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="porc_comision_pago_tarjeta" type="xs:decimal" />
+      <xs:element minOccurs="0" name="precio_oficial" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="segmento" type="xs:int" />
+      <xs:element minOccurs="0" name="status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="subcategoria" type="xs:int" />
+      <xs:element minOccurs="0" name="sustancia_activa" type="xs:int" />
+      <xs:element minOccurs="0" name="tipo_cenefa" type="xs:int" />
+      <xs:element minOccurs="0" name="tipo_compra_prod" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tipo_producto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="uni_cambio_presenta" type="xs:int" />
+      <xs:element minOccurs="0" name="unidad_medida1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="unidad_medida2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="usuario" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Productos" nillable="true" type="tns:Productos" />
+  <xs:complexType name="Categorias">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Tipo_Registro" type="xs:int" />
+      <xs:element minOccurs="0" name="categoria" type="xs:int" />
+      <xs:element minOccurs="0" name="descripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="fecha_alta" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="segmento" type="xs:int" />
+      <xs:element minOccurs="0" name="status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="subcategoria" type="xs:int" />
+      <xs:element minOccurs="0" name="usuario" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Categorias" nillable="true" type="tns:Categorias" />
+</xs:schema>
